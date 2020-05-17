@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.collections.*?>
+
+<SplitPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="396.0" prefWidth="619.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hospital.RegisterController">
+    <items>
+        <AnchorPane fx:id="pane" minHeight="0.0" minWidth="0.0" prefHeight="320.0" prefWidth="588.0">
+            <children>
+                <Label fx:id="welcomeLabel" layoutX="31.0" layoutY="29.0" prefHeight="27.0" prefWidth="602.0" text="欢迎进入医院门诊挂号系统" textFill="#ae1c87">
+                    <font>
+                        <Font name="Arial" size="20.0" />
+                    </font>
+                </Label>
+                <Label layoutX="31.0" layoutY="87.0" text="号种类别" AnchorPane.bottomAnchor="224.0" AnchorPane.leftAnchor="31.0">
+                    <font>
+                        <Font name="Arial Bold" size="15.0" />
+                    </font>
+                </Label>
+                <Label layoutX="312.0" layoutY="87.0" text="号种名称" AnchorPane.bottomAnchor="224.0" AnchorPane.rightAnchor="245.0">
+                    <font>
+                        <Font name="Arial Bold" size="15.0" />
+                    </font>
+                </Label>
+                <Label layoutX="312.0" layoutY="130.0" text="应缴金额" AnchorPane.bottomAnchor="181.0" AnchorPane.rightAnchor="245.0">
+                    <font>
+                        <Font name="Arial Bold" size="15.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="feeLabel" disable="true" editable="false" layoutX="376.0" layoutY="125.0" prefHeight="27.0" prefWidth="186.0" AnchorPane.bottomAnchor="173.0" AnchorPane.rightAnchor="55.0" />
+                <Label layoutX="31.0" layoutY="131.0" text="交款金额" AnchorPane.bottomAnchor="180.0" AnchorPane.leftAnchor="31.0">
+                    <font>
+                        <Font name="Arial Bold" size="15.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="refundLabel" disable="true" editable="false" layoutX="97.0" layoutY="166.0" prefHeight="30.0" prefWidth="186.0" AnchorPane.bottomAnchor="132.0" AnchorPane.leftAnchor="97.0" />
+                <Label layoutX="31.0" layoutY="172.0" text="找零金额" AnchorPane.bottomAnchor="139.0" AnchorPane.leftAnchor="31.0">
+                    <font>
+                        <Font name="Arial Bold" size="15.0" />
+                    </font>
+                </Label>
+                <Label layoutX="312.0" layoutY="173.0" text="挂号号码" AnchorPane.bottomAnchor="139.0" AnchorPane.rightAnchor="245.0">
+                    <font>
+                        <Font name="Arial Bold" size="15.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="registerNum" disable="true" editable="false" layoutX="376.0" layoutY="167.0" prefHeight="30.0" prefWidth="186.0" AnchorPane.bottomAnchor="131.0" AnchorPane.rightAnchor="55.0" />
+                <Label layoutX="31.0" layoutY="39.0" text="科室名称" AnchorPane.bottomAnchor="272.0" AnchorPane.leftAnchor="31.0">
+                    <font>
+                        <Font name="Arial Bold" size="15.0" />
+                    </font>
+                </Label>
+                <Label layoutX="312.0" layoutY="40.0" text="医生姓名" AnchorPane.bottomAnchor="271.0" AnchorPane.rightAnchor="245.0">
+                    <font>
+                        <Font name="Arial Bold" size="15.0" />
+                    </font>
+                </Label>
+                <Button fx:id="registerButton" layoutX="97.0" layoutY="285.0" mnemonicParsing="false" onMouseClicked="#onRegisterClick" prefHeight="30.0" prefWidth="186.0" style="-fx-background-color: #ae1c87;" text="挂号" textFill="#eeeaea" AnchorPane.bottomAnchor="79.0">
+                    <font>
+                        <Font name="System Bold" size="15.0" />
+                    </font>
+                </Button>
+                <TextField fx:id="inputMoney" disable="true" editable="false" layoutX="97.0" layoutY="190.0" prefHeight="30.0" prefWidth="186.0" />
+                <Button fx:id="exitButton" layoutX="379.0" layoutY="285.0" mnemonicParsing="false" onMouseClicked="#onExitButtonClick" prefHeight="30.0" prefWidth="186.0" style="-fx-background-color: #ae1c87;" text="退出" textFill="#fcfcfc">
+                    <font>
+                        <Font name="System Bold" size="15.0" />
+                    </font>
+                </Button>
+            <ComboBox fx:id="inputDepartment" editable="true" layoutX="97.0" layoutY="100.0" prefHeight="30.0" prefWidth="186.0" promptText="科室名称" />
+            <ComboBox fx:id="inputIfSp" editable="true" layoutX="97.0" layoutY="145.0" prefHeight="30.0" prefWidth="186.0" promptText="号种类别" />
+            <ComboBox fx:id="inputDoctor" editable="true" layoutX="374.0" layoutY="99.0" prefHeight="30.0" prefWidth="186.0" promptText="医生姓名" />
+            <ComboBox fx:id="inputNameRegister" editable="true" layoutX="374.0" layoutY="145.0" prefHeight="30.0" prefWidth="186.0" promptText="号种名称" />
+            <Label fx:id="statusLabel" layoutX="36.0" layoutY="345.0" />
+            </children></AnchorPane>
+    </items>
+</SplitPane>

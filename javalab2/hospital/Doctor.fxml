@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="396.0" prefWidth="619.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hospital.doctorController">
+   <children>
+          <Label fx:id="welcomeLabel" layoutX="12.0" layoutY="14.0" text="欢迎进入医院挂号系统" textFill="#ae1c87">
+              <font>
+                  <Font size="20.0" />
+              </font>
+          </Label>
+          <TabPane fx:id="mainPane" layoutX="8.0" layoutY="50.0" prefHeight="271.0" prefWidth="603.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                  <Tab fx:id="patinetsTab" style="-fx-background-color: #ae1c87;" text="病人列表">
+                      <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                              <children>
+                                  <TableView fx:id="patientTable" prefHeight="238.0" prefWidth="603.0">
+                                      <columns>
+                                          <TableColumn fx:id="registerNum" editable="false" prefWidth="107.0" text="挂号编号" />
+                                          <TableColumn fx:id="patientName" editable="false" prefWidth="134.0" text="病人名称" />
+                                          <TableColumn fx:id="registerDate" editable="false" prefWidth="214.0" text="挂号日期时间" />
+                                          <TableColumn fx:id="isSp" editable="false" prefWidth="147.0" text="号种类别" />
+                                      </columns>
+                                  </TableView>
+                              </children>
+                          </AnchorPane>
+                      </content>
+                  </Tab>
+                  <Tab fx:id="incomeTab" style="-fx-background-color: #ae1c87;" text="收入列表">
+                      <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                              <children>
+                                  <TableView fx:id="incomeTable" layoutX="1.0" layoutY="1.0" prefHeight="231.0" prefWidth="603.0">
+                                      <columns>
+                                          <TableColumn fx:id="departmentName" prefWidth="93.0" text="科室名称" />
+                                          <TableColumn fx:id="docId" prefWidth="105.0" text="医生编号" />
+                                          <TableColumn fx:id="docName" prefWidth="94.0" text="医生名称" />
+                                          <TableColumn fx:id="isSpecial" prefWidth="98.0" text="号种类别" />
+                                          <TableColumn fx:id="registerCount" prefWidth="117.0" text="挂号人次" />
+                                          <TableColumn fx:id="incomeSum" prefWidth="95.0" text="收入合计" />
+                                      </columns>
+                                  </TableView>
+                              </children>
+                          </AnchorPane>
+                      </content>
+                  </Tab>
+              </tabs>
+          </TabPane>
+      <DatePicker fx:id="pickDateStart" editable="false" layoutX="76.0" layoutY="337.0" prefHeight="30.0" prefWidth="154.0" />
+      <DatePicker fx:id="pickDateEnd" editable="false" layoutX="310.0" layoutY="337.0" prefHeight="30.0" prefWidth="154.0" />
+      <Label layoutX="8.0" layoutY="342.0" text="开始日期" />
+      <Label layoutX="241.0" layoutY="342.0" text="截止日期" />
+      <Button fx:id="queryButton" layoutX="488.0" layoutY="337.0" mnemonicParsing="false" onMouseClicked="#onQueryButtonClicke" style="-fx-background-color: #ae1c87;" text="查询" textFill="WHITE" />
+      <Button fx:id="exitButton" layoutX="555.0" layoutY="337.0" mnemonicParsing="false" onMouseClicked="#onExitButtonClicked" style="-fx-background-color: #ae1c87;" text="退出" textFill="WHITE" />
+      <Label fx:id="startTimeLabel" disable="true" layoutX="76.0" layoutY="372.0" text="2020-09-30 10:00:00" />
+      <Label fx:id="startLabel" disable="true" layoutX="8.0" layoutY="372.0" text="开始时间" />
+      <Label fx:id="endLabel" disable="true" layoutX="241.0" layoutY="372.0" text="截止时间" />
+      <Label fx:id="endTimeLabel" disable="true" layoutX="313.0" layoutY="372.0" text="2020-09-30 10:00:00" />
+   </children>
+</AnchorPane>

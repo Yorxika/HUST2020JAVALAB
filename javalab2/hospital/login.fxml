@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.collections.*?>
+
+
+<AnchorPane prefHeight="75.0" prefWidth="598.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hospital.loginController">
+   <children>
+      <Label layoutX="209.0" layoutY="36.0" text="医院挂号系统" textFill="#ae1c87">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+            <Button fx:id="loginButton" layoutX="149.0" layoutY="265.0" mnemonicParsing="false" onMouseClicked="#onLoginClick" prefHeight="36.0" prefWidth="288.0" style="-fx-background-color: #ae1c87;" text="登录" textFill="WHITE" />
+            <TextField fx:id="inputUsername" layoutX="177.0" layoutY="119.0" prefHeight="36.0" prefWidth="288.0" promptText="请输入账号" />
+            <PasswordField fx:id="inputPassword" layoutX="177.0" layoutY="168.0" prefHeight="36.0" prefWidth="288.0" promptText="请输入密码" />
+            <ChoiceBox fx:id="loginType" layoutX="179.0" layoutY="210.0" prefHeight="37.0" prefWidth="61.0" style="-fx-background-color: #ae1c87;" value="患者">
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="患者" />
+                        <String fx:value="医生" />
+                    </FXCollections>
+                </items>
+            </ChoiceBox>
+            <Label layoutX="112.0" layoutY="210.0" prefHeight="36.0" prefWidth="97.0" text="登录身份" textAlignment="CENTER" />
+      <Label layoutX="115.0" layoutY="127.0" text="用户名" />
+      <Label layoutX="115.0" layoutY="176.0" text="密码" />
+      <Label fx:id="labelStatus" layoutX="27.0" layoutY="323.0" text=" " />
+   </children>
+</AnchorPane>
